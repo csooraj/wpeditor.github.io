@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
-<?php include "header.php"; ?>
-
-<body class="hold-transition skin-blue sidebar-mini">
-  <div class="wrapper">
-
+  <?php include "header.php"; ?>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
     <?php include "navbar.php"; ?>
     <?php include "sidebar.php"; ?>
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <section class="content">
@@ -65,13 +62,13 @@
                 </div>
                 <div class="form-group">
                   <a class="btn btn-app" onClick="UploadLogin()">
-                    <i class="fa fa-save"></i> Save
+                  <i class="fa fa-save"></i> Save
                   </a>
                   <a class="btn btn-app" onClick="ReloadPreview(1)">
-                    <i class="fa fa-android"></i>Preview
+                  <i class="fa fa-android"></i>Preview
                   </a>
                   <a class="btn btn-app" onClick="ReloadPreview(2)">
-                    <i class="fa fa-apple"></i>Preview
+                  <i class="fa fa-apple"></i>Preview
                   </a>
                 </div>
                 <div class="form-group">
@@ -87,45 +84,45 @@
       </section>
     </div>
     <?php include "footer.php"; ?>
-</body>
-<script>
-$(document).ready(function(){
-  var appname = $.cookie("appname");
-  document.getElementById("nameapp").innerHTML = appname;
-  $.getJSON("https://wp-react.firebaseio.com/"+appname+".json", function(result){
-    var obj = result;
-    if(obj.LoginBgUrl!==undefined){
-      var logourl = "https://wp-react.s3.ap-south-1.amazonaws.com/Assets/"+obj.LoginBgUrl;
-      var backgroundurl = "https://wp-react.s3.ap-south-1.amazonaws.com/Assets/"+obj.LoginLogo;
-      $("#Login_textColor").val(obj.LoginLabelColor); $("#Login_textColor").trigger('change');
-      $("#Login_buttonColor").val(obj.LoginButtonColor); $("#Login_buttonColor").trigger('change');
-      $("#Login_inputColor").val(obj.LoginButtonColor); $("#Login_inputColor").trigger('change');
-      document.getElementById("Login_labelSize").value=obj.LoginLabelSize;
-      document.getElementById("image1").src=logourl;
-      document.getElementById("image2").src=backgroundurl;
-      document.getElementById("Login_buttonTextSize").value=obj.LoginButtonTextSize;
-    }
-  });
- });
- $("#fileUpload").change(function(){
-   var reader = new FileReader();
-   reader.onload = function (e) {
-        // get loaded data and render thumbnail.
-        document.getElementById("image1").src = e.target.result;
-    };
+  </body>
+  <script>
+    $(document).ready(function(){
+      var appname = $.cookie("appname");
+      document.getElementById("nameapp").innerHTML = appname;
+      $.getJSON("https://wp-react.firebaseio.com/"+appname+".json", function(result){
+        var obj = result;
+        if(obj.LoginBgUrl!==undefined){
+          var logourl = "https://wp-react.s3.ap-south-1.amazonaws.com/Assets/"+obj.LoginBgUrl;
+          var backgroundurl = "https://wp-react.s3.ap-south-1.amazonaws.com/Assets/"+obj.LoginLogo;
+          $("#Login_textColor").val(obj.LoginLabelColor); $("#Login_textColor").trigger('change');
+          $("#Login_buttonColor").val(obj.LoginButtonColor); $("#Login_buttonColor").trigger('change');
+          $("#Login_inputColor").val(obj.LoginButtonColor); $("#Login_inputColor").trigger('change');
+          document.getElementById("Login_labelSize").value=obj.LoginLabelSize;
+          document.getElementById("image1").src=logourl;
+          document.getElementById("image2").src=backgroundurl;
+          document.getElementById("Login_buttonTextSize").value=obj.LoginButtonTextSize;
+        }
+      });
+     });
+     $("#fileUpload").change(function(){
+       var reader = new FileReader();
+       reader.onload = function (e) {
+            // get loaded data and render thumbnail.
+            document.getElementById("image1").src = e.target.result;
+        };
 
-    // read the image file as a data URL.
-    reader.readAsDataURL(this.files[0]);
- });
- $("#fileUpload1").change(function(){
-   var reader = new FileReader();
-   reader.onload = function (e) {
-        // get loaded data and render thumbnail.
-        document.getElementById("image2").src = e.target.result;
-    };
+        // read the image file as a data URL.
+        reader.readAsDataURL(this.files[0]);
+     });
+     $("#fileUpload1").change(function(){
+       var reader = new FileReader();
+       reader.onload = function (e) {
+            // get loaded data and render thumbnail.
+            document.getElementById("image2").src = e.target.result;
+        };
 
-    // read the image file as a data URL.
-    reader.readAsDataURL(this.files[0]);
- });
-</script>
+        // read the image file as a data URL.
+        reader.readAsDataURL(this.files[0]);
+     });
+  </script>
 </html>
