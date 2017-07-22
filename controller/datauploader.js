@@ -143,7 +143,7 @@ function HandleLoader() {
 function ReloadPreview(type) {
   var iframe = document.getElementById('mine');
   if (type === 1) {
-    iframe.src = "https://appetize.io/embed/zfxtva39wrdmng5tn5yga1mzwg?device=nexus5&scale=75&orientation=portrait&osVersion=7.0";
+    iframe.src = "https://appetize.io/embed/47pkutv8gvtxb0v6frf06qav9g?device=nexus5&scale=75&orientation=portrait&osVersion=7.0";
   } else {
     iframe.src = "https://appetize.io/embed/3neek0ahqvn2wk86w9zxd4bvyg?device=iphone5s&scale=75&orientation=portrait&osVersion=9.3";
   }

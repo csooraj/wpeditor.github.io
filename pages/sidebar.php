@@ -29,10 +29,11 @@
           <li><a href="./forgotpassword.php"><i class="fa fa-circle-o"></i>Forgot Password</a></li>
           <li><a href="./createaccount.php"><i class="fa fa-circle-o"></i>Create Account</a></li>
           <li><a href="./mobilesidebar.php"><i class="fa fa-circle-o"></i>Side Bar</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i>Home</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i>Post</a></li>
+          <li><a href="./home.php"><i class="fa fa-circle-o"></i>Home</a></li>
+          <li><a href="./postarchive.php"><i class="fa fa-circle-o"></i>Post Archive</a></li>
+          <li><a href="./categoryarchive.php"><i class="fa fa-circle-o"></i>Category Archive</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i>Custom Post</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i>Post Category</a></li>
+          <li><a href="./category.php"><i class="fa fa-circle-o"></i>Post Category</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i>Post Details</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i>Comment</a></li>
         </ul>
